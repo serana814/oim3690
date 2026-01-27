@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page</title>
+    <style>
+      body { max-width: 800px; margin: 40px auto; font-family: system-ui, Arial; line-height: 1.6; padding: 0 16px; }
+      pre { white-space: pre-wrap; }
+    </style>
+  </head>
+  <body>
+    <h1>Title</h1>
+
+    <pre>
+Hello my name is Sofia!    </pre>
+  </body>
+</html>
