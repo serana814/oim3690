@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorites</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        /* Main Content Styles */
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        /* Article Styles */
+        article {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+
+        article h3 {
+            color: #764ba2;
+            margin-bottom: 8px;
+        }
+
+        article p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        article .rating {
+            color: #ffc107;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Aside Styles */
+        aside {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-left: 4px solid #ffc107;
+        }
+
+        aside h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        aside ul {
+            margin-left: 20px;
+        }
+
+        aside li {
+            margin: 8px 0;
+            color: #333;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER SECTION: The top banner of the page -->
+    <!-- <header> is a semantic tag that represents introductory content or a group of introductory/navigational aids -->
+    <header>
+        <h1>🌟 My Favorites</h1>
+        <p>A collection of things I love and enjoy</p>
+    </header>
+
+    <!-- NAV SECTION: Navigation links -->
+    <!-- <nav> is a semantic tag that contains navigation links to help users move around the site -->
+    <nav>
+        <ul>
+            <li><a href="#movies">🎬 Movies</a></li>
+            <li><a href="#books">📚 Books</a></li>
+            <li><a href="#foods">🍕 Foods</a></li>
+            <li><a href="#travel">✈️ Travel</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN SECTION: The primary content -->
+    <!-- <main> is a semantic tag that specifies the main content of the page (only one per page) -->
+    <main>
+
+        <!-- SECTION 1: Movies -->
+        <!-- <section> is a semantic tag that defines a thematic grouping of content -->
+        <section id="movies">
+            <h2>🎬 Favorite Movies</h2>
+
+            <!-- ARTICLE 1: Movie Review -->
+            <!-- <article> is a semantic tag that represents independent, self-contained content (like a blog post, movie review, etc.) -->
+            <article>
+                <h3>The Shawshank Redemption</h3>
+                <p><strong>Genre:</strong> Drama</p>
+                <p><strong>Year:</strong> 1994</p>
+                <p>An amazing story about hope and friendship in a prison. The cinematography is beautiful and the acting is outstanding.</p>
+                <p class="rating">⭐⭐⭐⭐⭐ (5/5 stars)</p>
+            </article>
+
+            <article>
+                <h3>Inception</h3>
+                <p><strong>Genre:</strong> Sci-Fi/Thriller</p>
+                <p><strong>Year:</strong> 2010</p>
+                <p>A mind-bending film about dreams within dreams. The special effects are incredible and it keeps you thinking long after it ends.</p>
+                <p class="rating">⭐⭐⭐⭐⭐ (5/5 stars)</p>
+            </article>
+
+            <article>
+                <h3>Spirited Away</h3>
+                <p><strong>Genre:</strong> Animation/Fantasy</p>
+                <p><strong>Year:</strong> 2001</p>
+                <p>A magical animated masterpiece by Studio Ghibli. The art style is beautiful and the story is enchanting.</p>
+                <p class="rating">⭐⭐⭐⭐⭐ (5/5 stars)</p>
+            </article>
+        </section>
+
+        <!-- SECTION 2: Books -->
+        <section id="books">
+            <h2>📚 Favorite Books</h2>
+
+            <article>
+                <h3>To Kill a Mockingbird</h3>
+                <p><strong>Author:</strong> Harper Lee</p>
+                <p><strong>Year:</strong> 1960</p>
+                <p>A classic about morality and growing up in the American South. The characters are memorable and the message is timeless.</p>
+                <p class="rating">⭐⭐⭐⭐⭐ (5/5 stars)</p>
+            </article>
+
+            <article>
+                <h3>The Great Gatsby</h3>
+                <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+                <p><strong>Year:</strong> 1925</p>
+                <p>A beautifully written novel about wealth, love, and the American Dream. The prose is poetic and thought-provoking.</p>
+                <p class="rating">⭐⭐⭐⭐ (4/5 stars)</p>
+            </article>
+
+            <article>
+                <h3>Dune</h3>
+                <p><strong>Author:</strong> Frank Herbert</p>
+                <p><strong>Year:</strong> 1965</p>
+                <p>An epic science fiction novel with complex world-building and intricate politics. Perfect for anyone who loves detailed sci-fi.</p>
+                <p class="rating">⭐⭐⭐⭐⭐ (5/5 stars)</p>
+            </article>
+        </section>
+
+        <!-- SECTION 3: Foods -->
+        <section id="foods">
+            <h2>🍕 Favorite Foods</h2>
+
+            <article>
+                <h3>Sushi</h3>
+                <p>Japanese cuisine at its finest. Fresh ingredients, beautiful presentation, and amazing flavors all in one bite.</p>
+                <p class="rating">⭐⭐⭐⭐⭐ (5/5 stars)</p>
+            </article>
+
+            <article>
+                <h3>Pasta Carbonara</h3>
+                <p>A classic Italian dish with creamy sauce, pancetta, and parmesan. Simple but absolutely delicious.</p>
+                <p class="rating">⭐⭐⭐⭐⭐ (5/5 stars)</p>
+            </article>
+
+            <article>
+                <h3>Thai Green Curry</h3>
+                <p>Spicy, aromatic, and full of flavor. The perfect balance of heat, herbs, and creaminess.</p>
+                <p class="rating">⭐⭐⭐⭐ (4/5 stars)</p>
+            </article>
+        </section>
+
+        <!-- SECTION 4: Travel -->
+        <section id="travel">
+            <h2>✈️ Favorite Travel Destinations</h2>
+
+            <article>
+                <h3>Japan</h3>
+                <p><strong>Highlights:</strong> Ancient temples, modern cities, delicious food, and friendly culture</p>
+                <p>A perfect blend of tradition and innovation. From the serene temples of Kyoto to the bustling streets of Tokyo.</p>
+                <p class="rating">⭐⭐⭐⭐⭐ (5/5 stars)</p>
+            </article>
+
+            <article>
+                <h3>Italy</h3>
+                <p><strong>Highlights:</strong> Ancient history, Renaissance art, stunning landscapes, amazing cuisine</p>
+                <p>Rich history and culture at every corner. Perfect for art lovers and food enthusiasts.</p>
+                <p class="rating">⭐⭐⭐⭐⭐ (5/5 stars)</p>
+            </article>
+
+            <article>
+                <h3>New Zealand</h3>
+                <p><strong>Highlights:</strong> Stunning landscapes, adventure activities, adventure sports, friendly locals</p>
+                <p>Nature in its purest form. Mountains, fjords, beaches, and adventure at every turn.</p>
+                <p class="rating">⭐⭐⭐⭐ (4/5 stars)</p>
+            </article>
+        </section>
+
+        <!-- ASIDE SECTION: Side information/tips -->
+        <!-- <aside> is a semantic tag for content tangentially related to the main content (like sidebars, tips, warnings) -->
+        <aside>
+            <h3>💡 Fun Fact</h3>
+            <p>Did you know that semantic HTML helps:</p>
+            <ul>
+                <li><strong>Search Engines:</strong> Better understand your page content</li>
+                <li><strong>Accessibility:</strong> Screen readers can navigate your page better</li>
+                <li><strong>Maintainability:</strong> Code is easier to read and update</li>
+                <li><strong>SEO:</strong> Better rankings in search results</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER SECTION: Bottom of the page -->
+    <!-- <footer> is a semantic tag that represents a footer section, typically containing metadata, links, or copyright info -->
+    <footer>
+        <p>&copy; 2026 My Favorites. All rights reserved.</p>
+        <p>Created with <strong>Semantic HTML</strong> and <strong>CSS</strong></p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
+
+</body>
+</html>

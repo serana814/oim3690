@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Tags & Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .tag-section {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
+        }
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        h1 { color: #2c3e50; }
+        h2 { color: #3498db; }
+    </style>
+</head>
+<body>
+    <h1>🎓 Basic HTML Tags & Elements</h1>
+
+    <!-- HEADING TAGS -->
+    <div class="tag-section">
+        <h2>&lt;h1&gt; to &lt;h6&gt; - Heading Tags</h2>
+        <p><strong>Purpose:</strong> Define headings at different levels (h1 is most important, h6 is least important)</p>
+        <p><strong>Example:</strong></p>
+        <code>&lt;h1&gt;Main Title&lt;/h1&gt;</code><br>
+        <code>&lt;h2&gt;Subtitle&lt;/h2&gt;</code><br>
+        <code>&lt;h3&gt;Section&lt;/h3&gt;</code>
+        <p><strong>Output:</strong></p>
+        <h1>Main Title</h1>
+        <h2>Subtitle</h2>
+        <h3>Section</h3>
+    </div>
+
+    <!-- PARAGRAPH TAG -->
+    <div class="tag-section">
+        <h2>&lt;p&gt; - Paragraph</h2>
+        <p><strong>Purpose:</strong> Create a block of text (paragraph)</p>
+        <p><strong>Example:</strong> <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></p>
+        <p><strong>Output:</strong></p>
+        <p>This is a paragraph. Paragraphs automatically have spacing above and below them.</p>
+    </div>
+
+    <!-- EMPHASIS & STRONG -->
+    <div class="tag-section">
+        <h2>&lt;em&gt; & &lt;strong&gt; - Emphasis & Strong</h2>
+        <p><strong>Purpose:</strong> <code>&lt;em&gt;</code> makes text italic (emphasis), <code>&lt;strong&gt;</code> makes text bold (strong importance)</p>
+        <p><strong>Example:</strong> <code>&lt;em&gt;italic text&lt;/em&gt;</code> and <code>&lt;strong&gt;bold text&lt;/strong&gt;</code></p>
+        <p><strong>Output:</strong></p>
+        <p>This is <em>italic text</em> and this is <strong>bold text</strong></p>
+    </div>
+
+    <!-- LINK TAG -->
+    <div class="tag-section">
+        <h2>&lt;a&gt; - Anchor (Link)</h2>
+        <p><strong>Purpose:</strong> Create hyperlinks to other pages or websites</p>
+        <p><strong>Example:</strong> <code>&lt;a href="https://google.com"&gt;Click here&lt;/a&gt;</code></p>
+        <p><strong>Output:</strong></p>
+        <p><a href="https://google.com">Click here to visit Google</a></p>
+        <p><strong>Note:</strong> The <code>href</code> attribute contains the link destination.</p>
+    </div>
+
+    <!-- IMAGE TAG -->
+    <div class="tag-section">
+        <h2>&lt;img&gt; - Image</h2>
+        <p><strong>Purpose:</strong> Display images on a webpage</p>
+        <p><strong>Example:</strong> <code>&lt;img src="photo.jpg" alt="A photo"&gt;</code></p>
+        <p><strong>Key Attributes:</strong></p>
+        <ul>
+            <li><code>src</code> - Source/path to the image file</li>
+            <li><code>alt</code> - Alternative text if image doesn't load (important for accessibility)</li>
+            <li><code>width</code> & <code>height</code> - Size of the image</li>
+        </ul>
+        <p><strong>Note:</strong> This is a self-closing tag (no closing tag needed)</p>
+    </div>
+
+    <!-- LISTS -->
+    <div class="tag-section">
+        <h2>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; - Lists</h2>
+        <p><strong>Purpose:</strong> Create unordered lists (bullets) or ordered lists (numbers)</p>
+        <p><strong>&lt;ul&gt; - Unordered List (Bullets):</strong></p>
+        <code>&lt;ul&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+        &lt;/ul&gt;</code>
+        <p><strong>Output:</strong></p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <p><strong>&lt;ol&gt; - Ordered List (Numbers):</strong></p>
+        <code>&lt;ol&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;First step&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Second step&lt;/li&gt;<br>
+        &lt;/ol&gt;</code>
+        <p><strong>Output:</strong></p>
+        <ol>
+            <li>First step</li>
+            <li>Second step</li>
+            <li>Third step</li>
+        </ol>
+    </div>
+
+    <!-- BUTTON TAG -->
+    <div class="tag-section">
+        <h2>&lt;button&gt; - Button</h2>
+        <p><strong>Purpose:</strong> Create an interactive button</p>
+        <p><strong>Example:</strong> <code>&lt;button&gt;Click Me&lt;/button&gt;</code></p>
+        <p><strong>Output:</strong></p>
+        <button>Click Me</button>
+    </div>
+
+    <!-- DIV TAG -->
+    <div class="tag-section">
+        <h2>&lt;div&gt; - Division (Container)</h2>
+        <p><strong>Purpose:</strong> Group content together (used for layout and styling)</p>
+        <p><strong>Example:</strong> <code>&lt;div&gt;...content...&lt;/div&gt;</code></p>
+        <p><strong>Note:</strong> A <code>&lt;div&gt;</code> is a generic container that doesn't do anything by itself but helps organize code and apply CSS styling.</p>
+    </div>
+
+    <!-- INPUT TAG -->
+    <div class="tag-section">
+        <h2>&lt;input&gt; - Input Field</h2>
+        <p><strong>Purpose:</strong> Let users enter information (text, password, checkbox, etc.)</p>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li><code>&lt;input type="text"&gt;</code> - Text input</li>
+            <li><code>&lt;input type="password"&gt;</code> - Password input</li>
+            <li><code>&lt;input type="checkbox"&gt;</code> - Checkbox</li>
+            <li><code>&lt;input type="radio"&gt;</code> - Radio button</li>
+            <li><code>&lt;input type="submit"&gt;</code> - Submit button</li>
+        </ul>
+        <p><strong>Output (Examples):</strong></p>
+        <input type="text" placeholder="Enter text here">
+        <input type="password" placeholder="Enter password">
+        <input type="checkbox"> Option 1
+        <input type="radio" name="choice"> Option A
+        <input type="radio" name="choice"> Option B
+    </div>
+
+    <!-- FORM TAG -->
+    <div class="tag-section">
+        <h2>&lt;form&gt; - Form</h2>
+        <p><strong>Purpose:</strong> Create a form to collect user input</p>
+        <p><strong>Example:</strong></p>
+        <code>&lt;form&gt;<br>
+        &nbsp;&nbsp;&lt;input type="text" placeholder="Name"&gt;<br>
+        &nbsp;&nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
+        &lt;/form&gt;</code>
+        <p><strong>Output:</strong></p>
+        <form>
+            <input type="text" placeholder="Enter your name">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- SPAN TAG -->
+    <div class="tag-section">
+        <h2>&lt;span&gt; - Span</h2>
+        <p><strong>Purpose:</strong> Style or group small inline content (doesn't create a new line)</p>
+        <p><strong>Example:</strong> <code>&lt;p&gt;This is &lt;span style="color: red;"&gt;red&lt;/span&gt; text&lt;/p&gt;</code></p>
+        <p><strong>Output:</strong></p>
+        <p>This is <span style="color: red;">red</span> text (unlike div, span stays on same line)</p>
+    </div>
+
+    <!-- BR TAG -->
+    <div class="tag-section">
+        <h2>&lt;br&gt; - Line Break</h2>
+        <p><strong>Purpose:</strong> Insert a line break</p>
+        <p><strong>Example:</strong> <code>Line 1&lt;br&gt;Line 2</code></p>
+        <p><strong>Output:</strong></p>
+        <p>Line 1<br>Line 2</p>
+        <p><strong>Note:</strong> This is a self-closing tag</p>
+    </div>
+
+    <!-- HR TAG -->
+    <div class="tag-section">
+        <h2>&lt;hr&gt; - Horizontal Rule</h2>
+        <p><strong>Purpose:</strong> Create a horizontal line to separate content</p>
+        <p><strong>Example:</strong> <code>&lt;hr&gt;</code></p>
+        <p><strong>Output:</strong></p>
+        <hr>
+        <p><strong>Note:</strong> This is a self-closing tag</p>
+    </div>
+
+    <!-- TABLE -->
+    <div class="tag-section">
+        <h2>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt; - Tables</h2>
+        <p><strong>Purpose:</strong> Display data in rows and columns</p>
+        <p><strong>Example:</strong></p>
+        <code>&lt;table&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Age&lt;/th&gt;<br>
+        &nbsp;&nbsp;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;John&lt;/td&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;25&lt;/td&gt;<br>
+        &nbsp;&nbsp;&lt;/tr&gt;<br>
+        &lt;/table&gt;</code>
+        <p><strong>Output:</strong></p>
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Sarah</td>
+                <td>23</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="tag-section" style="border-left-color: #27ae60;">
+        <h2>📋 Quick Reference</h2>
+        <table border="1" cellpadding="8" style="width: 100%; border-collapse: collapse;">
+            <tr style="background: #ecf0f1;">
+                <th>Tag</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td><code>&lt;h1&gt; - &lt;h6&gt;</code></td>
+                <td>Headings</td>
+            </tr>
+            <tr>
+                <td><code>&lt;p&gt;</code></td>
+                <td>Paragraph</td>
+            </tr>
+            <tr>
+                <td><code>&lt;strong&gt;</code></td>
+                <td>Bold text</td>
+            </tr>
+            <tr>
+                <td><code>&lt;em&gt;</code></td>
+                <td>Italic text</td>
+            </tr>
+            <tr>
+                <td><code>&lt;a&gt;</code></td>
+                <td>Link</td>
+            </tr>
+            <tr>
+                <td><code>&lt;img&gt;</code></td>
+                <td>Image</td>
+            </tr>
+            <tr>
+                <td><code>&lt;ul&gt; &lt;ol&gt; &lt;li&gt;</code></td>
+                <td>Lists</td>
+            </tr>
+            <tr>
+                <td><code>&lt;button&gt;</code></td>
+                <td>Button</td>
+            </tr>
+            <tr>
+                <td><code>&lt;div&gt;</code></td>
+                <td>Container</td>
+            </tr>
+            <tr>
+                <td><code>&lt;input&gt;</code></td>
+                <td>Input field</td>
+            </tr>
+            <tr>
+                <td><code>&lt;form&gt;</code></td>
+                <td>Form</td>
+            </tr>
+            <tr>
+                <td><code>&lt;br&gt;</code></td>
+                <td>Line break</td>
+            </tr>
+            <tr>
+                <td><code>&lt;hr&gt;</code></td>
+                <td>Horizontal line</td>
+            </tr>
+            <tr>
+                <td><code>&lt;table&gt;</code></td>
+                <td>Data table</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

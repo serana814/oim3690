@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background-color: #ffffff;
+        }
+
+        /* Header Styles - Professional and Clean */
+        header {
+            background-color: #ffffff;
+            border-bottom: 2px solid #34495e;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #1a252f;
+        }
+
+        header p {
+            font-size: 1em;
+            color: #7f8c8d;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        /* Navigation Styles - Minimal and Elegant */
+        nav {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: #34495e;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 5px;
+        }
+
+        nav a:hover {
+            color: #1a252f;
+            border-bottom: 2px solid #34495e;
+        }
+
+        /* Main Content Styles */
+        main {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 30px;
+        }
+
+        section {
+            background: #ffffff;
+            margin-bottom: 50px;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+        }
+
+        section h2 {
+            color: #1a252f;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        /* Article Styles - Subtle and Professional */
+        article {
+            margin-bottom: 30px;
+            padding: 20px 0;
+            background-color: transparent;
+            border-left: none;
+            border-radius: 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        article:last-child {
+            border-bottom: none;
+        }
+
+        article h3 {
+            color: #1a252f;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        article p {
+            margin: 10px 0;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        article ul {
+            margin: 15px 0 15px 25px;
+            color: #2c3e50;
+        }
+
+        article li {
+            margin: 8px 0;
+            line-height: 1.7;
+        }
+
+        article .rating {
+            display: none;
+        }
+
+        article a {
+            color: #34495e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #34495e;
+            transition: color 0.3s ease;
+        }
+
+        article a:hover {
+            color: #1a252f;
+        }
+
+        /* Aside Styles - Removed from professional view */
+        aside {
+            display: none;
+        }
+
+        /* Footer Styles - Professional */
+        footer {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 2px solid #34495e;
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-size: 0.95em;
+        }
+
+        footer a {
+            color: #34495e;
+            text-decoration: none;
+            border-bottom: 1px solid #34495e;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #1a252f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER SECTION: The top banner of the page -->
+    <!-- <header> is a semantic tag that represents introductory content or a group of introductory/navigational aids -->
+    <header>
+        <h1>Sofia Erana</h1>
+        <p>Web Developer & Marketing Professional</p>
+    </header>
+
+    <!-- NAV SECTION: Navigation links -->
+    <!-- <nav> is a semantic tag that contains navigation links to help users move around the site -->
+    <nav>
+        <ul>
+            <li><a href="#introduction">Overview</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN SECTION: The primary content -->
+    <!-- <main> is a semantic tag that specifies the main content of the page (only one per page) -->
+    <main>
+
+        <!-- SECTION 1: Introduction -->
+        <!-- <section> is a semantic tag that defines a thematic grouping of content -->
+        <section id="introduction">
+            <h2>Professional Overview</h2>
+
+            <article>
+                <p>
+                    I am a dedicated professional pursuing a Bachelor of Science in Business Administration with a focus on Marketing at Babson College. 
+                    Currently enrolled in OIM 3690 (Web Development), I am committed to mastering front-end web technologies and developing expertise in creating 
+                    responsive, accessible digital solutions. My foundation in business, combined with technical proficiency, enables me to bridge the gap 
+                    between business objectives and user-centered design.
+                </p>
+                <p>
+                    I am actively seeking opportunities to apply and expand my web development skills in a professional environment where I can contribute 
+                    to meaningful projects while continuing to grow as a developer.
+                </p>
+            </article>
+        </section>
+
+        <!-- SECTION 2: Skills -->
+        <section id="skills">
+            <h2>Technical & Professional Skills</h2>
+
+            <article>
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li><strong>HTML5:</strong> Building semantic, accessible web pages</li>
+                    <li><strong>CSS3:</strong> Styling and creating responsive designs</li>
+                    <li><strong>JavaScript:</strong> Adding interactivity to web pages</li>
+                    <li><strong>Git & GitHub:</strong> Version control and collaboration</li>
+                    <li><strong>Web Design:</strong> UI/UX principles and best practices</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li><strong>Problem Solving:</strong> Breaking down complex issues</li>
+                    <li><strong>Communication:</strong> Clear and effective expression</li>
+                    <li><strong>Collaboration:</strong> Working well with teams</li>
+                    <li><strong>Attention to Detail:</strong> Quality-focused approach</li>
+                    <li><strong>Adaptability:</strong> Quick learner in new environments</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION 3: Education -->
+        <section id="education">
+            <h2>Education</h2>
+
+            <article>
+                <h3>Babson College Undergraduate Student</h3>
+                <p>
+                    Bachelor of Science in Business Administration with a focus on Marketing
+                </p>
+            </article>
+
+            <article>
+                <h3>Current Courses</h3>
+                <ul>
+                    <li><strong>OIM 3690 - Web Technologies:</strong> Learning HTML, CSS, JavaScript, and responsive web design</li>
+                    <li><strong>QTM (Quantitative Methods):</strong> Data analysis and statistical concepts for business</li>
+                    <li><strong>Marketing for Entrepreneurs:</strong> Strategic marketing and business development</li>
+                    <li><strong>Global Gender Politics:</strong> Understanding global perspectives on gender and society</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION 4: Experience -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <article>
+                <h3>Web Development Projects</h3>
+                <p>
+                    I've worked on various HTML and CSS projects to strengthen my understanding of web fundamentals. 
+                    These projects include semantic HTML pages, responsive designs, and interactive web components.
+                </p>
+            </article>
+
+            <article>
+                <h3>Learning Journey</h3>
+                <p>
+                    My experience includes studying web standards, accessibility guidelines, and modern design patterns. 
+                    I'm passionate about writing clean, maintainable code and creating user-friendly interfaces.
+                </p>
+            </article>
+        </section>
+
+        <!-- SECTION 5: Contact -->
+        <section id="contact">
+            <h2>Contact Information</h2>
+
+            <article>
+                <h3>Get in Touch</h3>
+                <p>
+                    I'd love to hear from you! Feel free to reach out through the following:
+                </p>
+                <ul>
+                    <li><strong>Email:</strong> serana1@babson.edu</li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com" target="_blank">github.com/sofiaerana</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank">linkedin.com/in/sofiaerana</a></li>
+                    <li><strong>Twitter:</strong> <a href="https://twitter.com" target="_blank">@sofiaerana</a></li>
+                </ul>
+            </article>
+        </section>
+
+
+
+
+    </main>
+
+    <!-- FOOTER SECTION: Bottom of the page -->
+    <!-- <footer> is a semantic tag that represents a footer section, typically containing metadata, links, or copyright info -->
+    <footer>
+        <p>&copy; 2026 Sofia Erana. All rights reserved.</p>
+        <p><a href="#introduction">Back to top</a></p>
+    </footer>
+
+</body>
+</html>
