@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/s12-tabliss.styles.css">
+</head>
+<body>
+    <!-- background image is controlled by CSS (see s12-tabliss.styles.css) -->
+    <div id="time">00:00:00</div>
+
+    <div class="social-icons">
+        <!-- replace src attributes with actual logo paths or URLs -->
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">
+            <img src="https://via.placeholder.com/50?text=IG" alt="Instagram logo">
+        </a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener">
+            <img src="https://via.placeholder.com/50?text=TW" alt="Twitter logo">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">
+            <img src="https://via.placeholder.com/50?text=FB" alt="Facebook logo">
+        </a>
+    </div>
+
+    <script>
+        // update time every second
+        function updateTime() {
+            const now = new Date();
+            const h = String(now.getHours()).padStart(2, '0');
+            const m = String(now.getMinutes()).padStart(2, '0');
+            const s = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('time').textContent = `${h}:${m}:${s}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
