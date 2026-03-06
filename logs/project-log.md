@@ -1,0 +1,16 @@
+## Learning log entry: What questions did you ask? What surprised you about their answers? If you used AI to generate the initial HTML, what did it get right? What did you have to change to match the client's needs?
+- I asked the client to give me the overall look and feel that they wanted for their website. They replied by showing me their Instagram account so I could get a feel for the type of company they run and the kinds of clients they sell to. They also showed me an image of their logo and told me that they wanted the theme of the website to follow the colors and fonts used on their logo. They wanted it to look like it was made with a lot of love and happiness. 
+- I began writing the html code myself and generated a couple of basic tags such as headers and body text. However, once I had completed the basic skeleton of the website I turned to AI to help me make it more advanced and organized. Once I had the html completed, I showed it to the client to make sure that the information I was displaying was what they wanted; they agreed. 
+
+## What CSS properties did you learn? If you asked AI for help with styling, what did it suggest? Did you accept everything or modify some suggestions?
+- Learned:
+    - :root helped me define reusable variables such as the "primary pink" color so that I could use the same pink throughout the whole document without having to type the code every time
+    - I learned more about the box model and how to apply it in different sections of the website and playing around with things such as padding
+    - I played around with different hover effects to see how they would change the website
+- I used a lot of AI to help me get everything to exactly how I wanted and how I believed the client imagined it. I also used it to change certain things such as instead of using one solid color, changing it to a gradient. 
+- I did not immediately accept all of the AI suggestions, I would read over the code and make sure I understood what it was doing and asking chat GPT to explain certain changes before accepting. 
+
+## What feedback did your client give? What was the hardest change to make? What's one thing you'd do differently next time?
+- My client loved the first draft of the website, they asked that I modify the pink used and some sizing in certain titles. I made the appropriate changes and then they were satisfied. 
+- The hardest change was that in a simple change of an image, I tried to undo something and undid a little too much. After that, my entire CSS code had issues. I went back in to try and fix it myself and when I coudln't I consulted with AI and still could not figure it out. I ended up scratching everything and starting the website again from scratch with the help from AI and managed to get it back to what I originally had and implpemented the necessary changes from the client feedback. 
+- One thing I would do differently next time is pay more attention and try to do things less rushed. I believe that that is what caused the error in my code that I could not fix. 
