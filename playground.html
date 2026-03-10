@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Playground</title>
+	<!-- Favicon -->
+	<link rel="icon" href="images/granola-favicon.png" type="image/png">
+	<style>
+		body { font-family: Arial, sans-serif; margin: 2em; background: #faf6f1; }
+		h1 { color: #7c4d00; }
+		section { margin-bottom: 2em; }
+		canvas { border: 1px solid #ccc; background: #fffbe6; }
+		details { margin-bottom: 1em; }
+	</style>
+</head>
+<body>
+	<h1>Granola Company Playground</h1>
+
+	<section>
+		<h2>Embedded YouTube Video</h2>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/bBp8TX2sxA4?si=X3XZlXxNhfR_nRN8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+	</section>
+
+	<section>
+		<h2>Babson College Campus Map</h2>
+		<iframe src="https://www.google.com/maps?q=Babson+College&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</section>
+
+	<section>
+		<h2>Audio Sample</h2>
+		<audio controls>
+			<source src="audio/sample.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+	</section>
+
+	<section>
+		<h2>Video Sample</h2>
+		<video width="320" height="240" controls>
+			<source src="video/sample.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</section>
+
+	<section>
+		<h2>FAQ</h2>
+		<details>
+			<summary>What makes our granola special?</summary>
+			<p>We use only the finest organic ingredients and bake in small batches for maximum freshness.</p>
+		</details>
+		<details>
+			<summary>Where can I buy your granola?</summary>
+			<p>Our granola is available online and at select local stores.</p>
+		</details>
+		<details>
+			<summary>Is your granola gluten-free?</summary>
+			<p>Yes, all our products are certified gluten-free.</p>
+		</details>
+	</section>
+
+	<section>
+		<h2>Draw Something!</h2>
+		<canvas id="drawCanvas" width="400" height="300"></canvas>
+	</section>
+
+	<script>
+	// Simple drawing on canvas
+	const canvas = document.getElementById('drawCanvas');
+	const ctx = canvas.getContext('2d');
+	let drawing = false;
+
+	canvas.addEventListener('mousedown', () => { drawing = true; });
+	canvas.addEventListener('mouseup', () => { drawing = false; ctx.beginPath(); });
+	canvas.addEventListener('mouseout', () => { drawing = false; ctx.beginPath(); });
+	canvas.addEventListener('mousemove', draw);
+
+	function draw(e) {
+		if (!drawing) return;
+		ctx.lineWidth = 3;
+		ctx.lineCap = 'round';
+		ctx.strokeStyle = '#a67c52';
+		ctx.lineTo(e.offsetX, e.offsetY);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.moveTo(e.offsetX, e.offsetY);
+	}
+	</script>
+</body>
+</html>
