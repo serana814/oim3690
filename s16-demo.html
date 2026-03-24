@@ -1,0 +1,19 @@
+<textarea id="message"></textarea>
+<p id="text">Characters: <span id="count">0</span></p>
+<button id="myButton">Click me!</button>
+<script>
+const textarea = document.getElementById('message');
+const counter = document.getElementById('count');
+const text = document.getElementById('text');
+const button = document.getElementById('myButton');
+
+textarea.addEventListener('input', function() {
+  counter.textContent = textarea.value.length;
+  console.log('Input event fired!');
+});
+
+button.addEventListener('click', function() {
+  text.textContent = 'You clicked the button!';
+  text.style.color = 'blue';
+});
+</script>
