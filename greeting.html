@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+
+
+    <input id="name" type="text">
+    <select id="language">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="zh">Chinese</option>
+    </select>
+    <button id="greet-btn">Greet</button>
+    <p id="greeting"></p>
+
+    <style>
+    body {
+        transition: background 0.5s;
+    }
+    #greeting {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s, transform 0.6s;
+        font-size: 1.5em;
+        margin-top: 1em;
+        color: #333;
+        text-align: center;
+    }
+    #greeting.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    </style>
+    <script>
+    const input = document.querySelector('#name');
+    const button = document.querySelector('#greet-btn');
+    const p = document.querySelector('#greeting');
+    const language = document.querySelector('#language');
+    const greetings = {
+        en: 'Hello',
+        es: '¡Hola',
+        zh: '你好'
+    };
+
+    function setBackground(lang) {
+        if (lang === 'en') {
+            document.body.style.background = '#e0f7fa'; // light blue
+        } else if (lang === 'es') {
+            document.body.style.background = '#fff3e0'; // light orange
+        } else if (lang === 'zh') {
+            document.body.style.background = '#f3e5f5'; // light purple
+        }
+    }
+
+    language.addEventListener('change', function() {
+        setBackground(language.value);
+    });
+
+    button.addEventListener('click', function() {
+        const name = input.value;
+        const lang = language.value;
+        let greet = greetings[lang] || 'Hello';
+        if (lang === 'zh') {
+            p.textContent = `${greet}，${name}！`;
+        } else {
+            p.textContent = `${greet}, ${name}!`;
+        }
+        p.classList.remove('show');
+        // Animation: force reflow then add class
+        void p.offsetWidth;
+        p.classList.add('show');
+    });
+
+    // Set initial background
+    setBackground(language.value);
+    </script>
+</body>
+</html>
