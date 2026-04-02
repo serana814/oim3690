@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+<body>
+    <h2>Shopping List</h2>
+    <input id="itemInput" type="text" placeholder="Add an item">
+    <button onclick="addItem()">Add</button>
+    <ul id="list"></ul>
+
+    <script>
+        // Start with an array
+        const items = ['Milk', 'Eggs', 'Bread'];
+
+        // Function to render the list
+        function renderList() {
+            const ul = document.getElementById('list');
+            ul.innerHTML = '';
+            for (let i = 0; i < items.length; i++) {
+                const li = document.createElement('li');
+                li.textContent = items[i];
+                ul.appendChild(li);
+            }
+        }
+
+        // Function to add a new item
+        function addItem() {
+            const input = document.getElementById('itemInput');
+            const newItem = input.value.trim();
+            if (newItem !== '') {
+                items.push(newItem);
+                input.value = '';
+                renderList();
+            }
+        }
+
+        // Initial render
+        renderList();
+    </script>
+</body>
+</html>

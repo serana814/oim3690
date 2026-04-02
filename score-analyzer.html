@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Analyzer</title>
+</head>
+<body>
+    <h2>Score Analyzer</h2>
+    <div id="score-list"></div>
+    <p id="total"></p>
+    <p id="average"></p>
+    <p id="highest"></p>
+    <p id="lowest"></p>
+    <p id="passing"></p>
+
+    <script>
+        // Hardcoded array of scores
+        const scores = [88, 72, 95, 63, 81, 56, 90];
+
+        // Simple getGrade function (from S18)
+        function getGrade(score) {
+            if (score >= 90) return "A";
+            if (score >= 80) return "B";
+            if (score >= 70) return "C";
+            if (score >= 60) return "D";
+            return "F";
+        }
+
+        // Display each score with its grade
+        const scoreListDiv = document.getElementById('score-list');
+        let listHtml = '<ul>';
+        for (let i = 0; i < scores.length; i++) {
+            listHtml += `<li>Score: ${scores[i]} (Grade: ${getGrade(scores[i])})</li>`;
+        }
+        listHtml += '</ul>';
+        scoreListDiv.innerHTML = listHtml;
+
+        // Calculate total, average, highest, lowest, passing count
+        let total = 0;
+        let highest = scores[0];
+        let lowest = scores[0];
+        let passing = 0;
+        for (let i = 0; i < scores.length; i++) {
+            total += scores[i];
+            if (scores[i] > highest) highest = scores[i];
+            if (scores[i] < lowest) lowest = scores[i];
+            if (scores[i] >= 60) passing++;
+        }
+        const average = (total / scores.length).toFixed(1);
+
+        document.getElementById('total').textContent = 'Total number of scores: ' + scores.length;
+        document.getElementById('average').textContent = 'Average score: ' + average;
+        document.getElementById('highest').textContent = 'Highest score: ' + highest;
+        document.getElementById('lowest').textContent = 'Lowest score: ' + lowest;
+        document.getElementById('passing').textContent = 'Number of passing scores: ' + passing;
+    </script>
+</body>
+</html>
