@@ -28,12 +28,30 @@
 
 		function showGrade() {
 			var input = document.getElementById('scoreInput');
-			var score = Number(input.value);
+			var value = input.value.trim();
 			var result = document.getElementById('result');
-			if (isNaN(score) || score < 0 || score > 100) {
-				result.textContent = "Please enter a valid score between 0 and 100.";
+			result.style.color = '';
+			if (value === "") {
+				result.textContent = "Please enter a score";
+				return;
+			}
+			var score = Number(value);
+			if (isNaN(score)) {
+				result.textContent = "Please enter a score";
+				return;
+			}
+			if (score < 0 || score > 100) {
+				result.textContent = "Score must be between 0-100";
+				return;
+			}
+			var grade = getGrade(score);
+			result.textContent = "Your grade is: " + grade;
+			if (grade === "A" || grade === "B") {
+				result.style.color = "green";
+			} else if (grade === "D" || grade === "F") {
+				result.style.color = "red";
 			} else {
-				result.textContent = "Your grade is: " + getGrade(score);
+				result.style.color = "";
 			}
 		}
 	</script>
