@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Challenges</title>
+</head>
+<body>
+
+    <h1>Loop Challenges</h1>
+
+    <h2>1. Build a list</h2>
+    <ul id="numberList"></ul>
+
+    <h2>2. Sum it up</h2>
+    <p id="sum"></p>
+
+    <h2>3. Find the max</h2>
+    <p id="max"></p>
+
+    <h2>4. Count positives</h2>
+    <p id="positives"></p>
+
+    <h2>5. Find evens</h2>
+    <p id="evens"></p>
+
+    <script>
+        const numbers = [4, -8, 15, -16, 23, 42, -3];
+
+        // 1. Build a list
+        const ul = document.getElementById("numberList");
+        for (let i = 0; i < numbers.length; i++) {
+            const item = document.createElement("li");
+            item.textContent = numbers[i];
+            ul.appendChild(item);
+        }
+
+        // 2. Sum it up
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        document.getElementById("sum").textContent = "Total: " + sum;
+
+        // 3. Find the max
+        let max = numbers[0];
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+        }
+        document.getElementById("max").textContent = "Largest number: " + max;
+
+        // 4. Count positives
+        let count = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 0) {
+                count++;
+            }
+        }
+        document.getElementById("positives").textContent = "Positive numbers: " + count;
+
+        // 5.

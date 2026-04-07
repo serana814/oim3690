@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Analyzer</title>
+</head>
+<body>
+
+    <h1>Quiz Score Analyzer</h1>
+
+    <h2>Part 1</h2>
+    <p id="count"></p>
+    <p id="average"></p>
+    <p id="highest"></p>
+    <p id="lowest"></p>
+    <p id="passing"></p>
+
+    <h2>Part 2</h2>
+    <div id="bars"></div>
+
+    <script>
+        const scores = [88, 72, 95, 63, 81, 56, 90];
+
+        // --- Part 1 ---
+
+        // Total count
+        document.getElementById("count").textContent = "Total scores: " + scores.length;
+
+        // Average, highest, lowest, passing
+        let sum = 0;
+        let highest = scores[0];
+        let lowest = scores[0];
+        let passing = 0;
+
+        for (let i = 0; i < scores.length; i++) {
+            sum += scores[i];
+
+            if (scores[i] > highest) {
+                highest = scores[i];
+            }
+
+            if (scores[i] < lowest) {
+                lowest = scores[i];
+            }
+
+            if (scores[i] >= 60) {
+                passing++;
+            }
+        }
+
+        document.getElementById("average").textContent = "Average: " + (sum / scores.length).toFixed(1);
+        document.getElementById("highest").textContent = "Highest: " + highest;
+        document.getElementById("lowest").textContent = "Lowest: " + lowest;
+        document.getElementById("passing").textContent = "Passing scores (>= 60): " + passing;
+
+        // --- Part 2 ---
+
+        const barsDiv = document.getElementById("bars");
+
+        for (let i = 0; i < scores.length; i++) {
+            const score = scores[i];
+
+            // Get letter grade
+            let grade;
+            if (score >= 90) {
+                grade = "A";
+            } else if (score >= 80) {
+                grade = "B";
+            } else if (score >= 70) {
+                grade = "C";
+            } else if (score >= 60) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+
+            // Get color
+            let color;
+            if (grade === "A" || grade === "B") {
+                color = "green";
+            } else if (grade === "C" || grade === "D") {
+                color = "orange";
+            } else {
+                color = "red";
+            }
+
+            // Build the bar
+            const bar = document.createElement("div");
+            bar.style.width = score + "%";
+            bar.style.backgroundColor = color;
+            bar.style.color = "white";
+            bar.style.marginBottom = "6px";
+            bar.style.padding = "4px 8px";
+            bar.textContent = score + " - " + grade;
+
+            barsDiv.appendChild(bar);
+        }
+    </script>
+
+</body>
+</html>

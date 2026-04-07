@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grades</title>
+</head>
+<body>
+
+    <h2>Student Grades</h2>
+
+    <input type="text" id="nameInput" placeholder="Student name">
+    <input type="text" id="gradeInput" placeholder="Grade">
+    <button onclick="addStudent()">Add</button>
+
+    <ul id="studentList"></ul>
+
+    <script>
+        const students = [];
+
+        function addStudent() {
+            const name = document.getElementById("nameInput").value;
+            const grade = document.getElementById("gradeInput").value;
+
+            students.push({ name, grade });
+
+            document.getElementById("nameInput").value = "";
+            document.getElementById("gradeInput").value = "";
+
+            displayList();
+        }
+
+        function displayList() {
+            const list = document.getElementById("studentList");
+            list.innerHTML = "";
+
+            for (let i = 0; i < students.length; i++) {
+                const item = document.createElement("li");
+                item.textContent = students[i].name + " - " + students[i].grade;
+                list.appendChild(item);
+            }
+        }
+    </script>
+
+</body>
+</html>

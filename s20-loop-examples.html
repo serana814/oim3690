@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating</title>
+</head>
+<body>
+
+    <h2>Rating</h2>
+    <input type="number" id="ratingInput" min="1" max="5" placeholder="1-5">
+    <button onclick="showStars()">Submit</button>
+
+    <p id="stars"></p>
+
+    <script>
+        function showStars() {
+            const rating = Number(document.getElementById("ratingInput").value);
+            let stars = "";
+
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    stars += "★";
+                } else {
+                    stars += "☆";
+                }
+            }
+
+            document.getElementById("stars").textContent = stars;
+        }
+    </script>
+
+</body>
+</html>
