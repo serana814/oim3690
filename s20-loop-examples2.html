@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+</head>
+<body>
+
+    <h2>Progress Bar</h2>
+    <input type="number" id="percentInput" min="0" max="100" placeholder="0-100">
+    <button onclick="showBar()">Submit</button>
+
+    <p id="bar"></p>
+
+    <script>
+        function showBar() {
+            const percent = Number(document.getElementById("percentInput").value);
+            const filled = Math.round(percent / 10);
+            let bar = "";
+
+            for (let i = 1; i <= 10; i++) {
+                if (i <= filled) {
+                    bar += "█";
+                } else {
+                    bar += "░";
+                }
+            }
+
+            document.getElementById("bar").textContent = bar + " " + percent + "%";
+        }
+    </script>
+
+</body>
+</html>
