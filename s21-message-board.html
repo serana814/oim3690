@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Message Board</title>
+</head>
+<body>
+
+  <h1>Message Board</h1>
+
+  <input type="text" id="messageInput" placeholder="Type a message...">
+  <button onclick="postMessage()">Post Message</button>
+
+  <p id="status"></p>
+  <p id="loading" style="display:none;">Loading...</p>
+
+  <h2>Messages</h2>
+  <ul id="messageList"></ul>
+
+  <script>
+    const API_URL = "https://oim.108122.xyz/messages/";  // trailing slash added
+    const TOKEN = "sofiasofia";
+
+    async function fetchMessages() {
+      document.getElementById("loading").style.display = "block";
+      document.getElementById("messageList").innerHTML = "";
+
+      try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+
+        for (let i = 0; i < data.length; i++) {
+          const msg = data[i];
+          const li = document.createElement("li");
+          li.textContent = msg.author + ": " + msg.message;
+          document.getElementById("messageList").appendChild(li);
+        }
+      } catch (error) {
+        document.getElementById("status").textContent = "Error loading messages: " + error.message;
+      }
+
+      document.getElementById("loading").style.display = "none";
+    }
+
+    async function postMessage() {
+      const text = document.getElementById("messageInput").value;
+
+      if (text === "") {
+        document.getElementById("status").textContent = "Please type a message first.";
+        return;
+      }
+
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Token": TOKEN
+          },
+          body: JSON.stringify({ message: text })
+        });
+
+        if (response.ok) {
+          document.getElementById("status").textContent = "Message posted!";
+          document.getElementById("messageInput").value = "";
+          fetchMessages();
+        } else {
+          document.getElementById("status").textContent = "Post failed. Status: " + response.status;
+        }
+      } catch (error) {
+        document.getElementById("status").textContent = "Error posting: " + error.message;
+      }
+    }
+
+    fetchMessages();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Word</title>
+</head>
+<body>
+
+  <h1>Random Word Fetcher</h1>
+
+  <button onclick="getWord()">Get Random Word</button>
+
+  <button onclick="getFiveWords()">Get 5 Random Words</button>
+
+  <p id="loading" style="display:none;">Loading...</p>
+
+  <p id="result"></p>
+  <ul id="wordList"></ul>
+
+  <script>
+    const API_URL = "https://oim.108122.xyz/words/random";
+
+    async function getWord() {
+      document.getElementById("loading").style.display = "block";
+      document.getElementById("result").textContent = "";
+      document.getElementById("wordList").innerHTML = "";
+
+      try {
+        const response = await fetch(API_URL);        
+        const data = await response.json();   
+        document.getElementById("result").textContent = "Word: " + data.word;
+      } catch (error) {
+        document.getElementById("result").textContent = "Error: " + error.message;
+      }
+
+      document.getElementById("loading").style.display = "none";
+    }
+
+    async function getFiveWords() {
+      document.getElementById("loading").style.display = "block";
+      document.getElementById("result").textContent = "";
+      document.getElementById("wordList").innerHTML = "";
+
+      try {
+        for (let i = 0; i < 5; i++) {
+          const response = await fetch(API_URL);
+          const data = await response.json();
+
+          const li = document.createElement("li");
+          li.textContent = data.word;
+          document.getElementById("wordList").appendChild(li);
+        }
+      } catch (error) {
+        document.getElementById("result").textContent = "Error: " + error.message;
+      }
+
+      document.getElementById("loading").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
